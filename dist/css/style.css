@@ -9932,7 +9932,7 @@ ol.list-terms > li > ol > li > ol > li {
 
 .modArrayShading {
   position: relative;
-  min-width: 400px;
+  min-width: 340px;
   margin: 0 auto !important;
 }
 
@@ -10086,6 +10086,77 @@ ol.list-terms > li > ol > li > ol > li {
   border-radius: 50%;
   background: #4CAF50;
   cursor: pointer;
+}
+
+.mapSlider {
+  width: 120%;
+}
+
+.hidden {
+  display: none;
+}
+
+.secondSlider__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 13px;
+}
+
+.secondSlider__left {
+  margin-left: 20px;
+}
+
+.secondSlider__right {
+  margin-right: 20px;
+}
+
+.fourSlider {
+  width: 366px;
+}
+
+.fourSlider__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.fourSlider__container div {
+  text-align: center;
+  font-size: 13px;
+}
+
+.fourSlidecontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 576px) {
@@ -15534,6 +15605,17 @@ ol.list-terms > li > ol > li > ol > li {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .fourSlider {
+    width: 300px;
+  }
+
+  .fourSlider__container {
+    gap: 35px;
+    padding: 0;
   }
 }
 

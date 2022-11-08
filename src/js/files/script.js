@@ -40,3 +40,110 @@ secondSlider.oninput = function () {
   $('.Diagram').css('background-position', '0px ' + (0 - (pxBackgroundPosition)) + 'px');
 
 }
+
+//========================================================================================================================================================
+// MAP
+//========================================================================================================================================================
+
+
+var mapSlider = document.getElementById("mapSlider");
+var mapOutput = document.getElementById("hiddenValueMap");
+mapOutput.value = mapSlider.value; // Display the default slider value
+
+
+// Update the current slider value (each time you drag the slider handle)
+
+mapSlider.oninput = function () {
+  mapOutput.value = this.value;
+
+  var pxBackgroundPosition = mapSlider.value * 195;
+  $('.ArrayDirection').css('background-position', '0px ' + parseInt(0 - pxBackgroundPosition) + 'px');
+}
+
+//========================================================================================================================================================
+//Step1 Next Button
+var step1Next = document.getElementById('cphMainContent');
+
+step1Next.addEventListener('click', step1NextHandler);
+
+function step1NextHandler() {
+  var getNum = document.getElementById('cphMainContentInput').value;
+  DrawMap(getNum)
+}
+//========================================================================================================================================================
+//Step2 Back Button
+var step2BackButton = document.getElementById('step2BackButton');
+
+step2BackButton.addEventListener('click', step2BackButtonHandler);
+
+function step2BackButtonHandler() {
+  document.getElementById('rmpView').classList.toggle('hidden');
+  document.getElementById('card').classList.toggle('hidden');
+}
+
+
+//========================================================================================================================================================
+// MAP Create
+
+// need delete
+//document.getElementById('rmpView').classList.toggle('hidden');
+
+
+function DrawMap(getNum) {
+
+  var geocoder = new google.maps.Geocoder();
+  var address = getNum;
+  geocoder.geocode({ 'address': address }, function (results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      if (results[0].types[0] == 'postal_code') {
+        var latitude = results[0].geometry.location.lat();
+        var longitude = results[0].geometry.location.lng();
+        var data = {};
+        data.title = results[0].formatted_address;
+        data.lat = latitude;
+        data.lng = longitude;
+        var mapOptions = { center: new google.maps.LatLng(latitude, longitude), zoom: 19, mapTypeId: google.maps.MapTypeId.HYBRID };
+        var infoWindow = new google.maps.InfoWindow();
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        //========================================================================================================================================================
+        // NEED DELETE COMMENT
+        document.getElementById('card').classList.toggle('hidden');
+        document.getElementById('rmpView').classList.toggle('hidden');
+        document.getElementById("mapAllert").classList.add('hidden');
+
+        //========================================================================================================================================================
+
+        var marker;
+        (function (marker, data) {
+          google.maps.event.addListener(marker, "click", function (e) {
+            infoWindow.setContent("<div style ='width:200px;height:50px'>" + data.title + "</div>");
+            infoWindow.open(map, marker);
+          });
+        })(marker, data);
+        document.getElementById("map").style.display = "block";
+      } else {
+        document.getElementById("mapAllert").classList.remove('hidden');
+      }
+    } else {
+      document.getElementById("mapAllert").classList.remove('hidden');
+    }
+  });
+};
+
+//========================================================================================================================================================
+
+
+var fourSlider = document.getElementById("fourSlider");
+//var mapOutput = document.getElementById("hiddenValueMap");
+//mapOutput.value = mapSlider.value; // Display the default slider value
+
+
+// Update the current slider value (each time you drag the slider handle)
+
+fourSlider.oninput = function () {
+  //mapOutput.value = this.value;
+
+  var pxBackgroundPosition = parseInt(fourSlider.value * 100);
+  $('.Diagram').css('background-position', '0px ' + (0 - (pxBackgroundPosition)) + 'px');
+}

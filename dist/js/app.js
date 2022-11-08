@@ -38,6 +38,65 @@
         var pxBackgroundPosition = parseInt(112 * secondSlider.value);
         $(".Diagram").css("background-position", "0px " + (0 - pxBackgroundPosition) + "px");
     };
+    var mapSlider = document.getElementById("mapSlider");
+    var mapOutput = document.getElementById("hiddenValueMap");
+    mapOutput.value = mapSlider.value;
+    mapSlider.oninput = function() {
+        mapOutput.value = this.value;
+        var pxBackgroundPosition = 195 * mapSlider.value;
+        $(".ArrayDirection").css("background-position", "0px " + parseInt(0 - pxBackgroundPosition) + "px");
+    };
+    var step1Next = document.getElementById("cphMainContent");
+    step1Next.addEventListener("click", step1NextHandler);
+    function step1NextHandler() {
+        var getNum = document.getElementById("cphMainContentInput").value;
+        DrawMap(getNum);
+    }
+    var step2BackButton = document.getElementById("step2BackButton");
+    step2BackButton.addEventListener("click", step2BackButtonHandler);
+    function step2BackButtonHandler() {
+        document.getElementById("rmpView").classList.toggle("hidden");
+        document.getElementById("card").classList.toggle("hidden");
+    }
+    function DrawMap(getNum) {
+        var geocoder = new google.maps.Geocoder;
+        var address = getNum;
+        geocoder.geocode({
+            address
+        }, (function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) if ("postal_code" == results[0].types[0]) {
+                var latitude = results[0].geometry.location.lat();
+                var longitude = results[0].geometry.location.lng();
+                var data = {};
+                data.title = results[0].formatted_address;
+                data.lat = latitude;
+                data.lng = longitude;
+                var mapOptions = {
+                    center: new google.maps.LatLng(latitude, longitude),
+                    zoom: 19,
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                };
+                var infoWindow = new google.maps.InfoWindow;
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                document.getElementById("card").classList.toggle("hidden");
+                document.getElementById("rmpView").classList.toggle("hidden");
+                document.getElementById("mapAllert").classList.add("hidden");
+                var marker;
+                (function(marker, data) {
+                    google.maps.event.addListener(marker, "click", (function(e) {
+                        infoWindow.setContent("<div style ='width:200px;height:50px'>" + data.title + "</div>");
+                        infoWindow.open(map, marker);
+                    }));
+                })(marker, data);
+                document.getElementById("map").style.display = "block";
+            } else document.getElementById("mapAllert").classList.remove("hidden"); else document.getElementById("mapAllert").classList.remove("hidden");
+        }));
+    }
+    var fourSlider = document.getElementById("fourSlider");
+    fourSlider.oninput = function() {
+        var pxBackgroundPosition = parseInt(100 * fourSlider.value);
+        $(".Diagram").css("background-position", "0px " + (0 - pxBackgroundPosition) + "px");
+    };
     window["FLS"] = true;
     isWebp();
 })();
