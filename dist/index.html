@@ -203,7 +203,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221108220604">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221111014334">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
@@ -219,36 +219,38 @@
 		<main class="page">
 			<div class="page__container">
 				<div class="first__block">
-					<h1>Solar Energy Calculator</h1>
 
-					<div class="modContentBlock">
-						<p>
-							This tool provides estimates for fuel bill saving and financial
-							payments you may receive by installing a solar photovoltaic (i.e.
-							solar PV) system. These figures are based on information you provide,
-							using a number of assumptions to indicate potential benefits.
-							This is to help you decide whether a solar PV system is suitable for you.
-						</p>
-						<p>
-							Use of the tool and its outputs is not a guarantee that you will see the
-							exact same fuel bill savings and financial payments from the installation
-							of your planned system.
-						</p>
-						<p>
-							This tool estimates potential payments from the
-							<a href="https://energysavingtrust.org.uk/renewable-energy/electricity/solar-panels/smart-export-guarantee-and-feed-tariffs" target="_blank">Smart Export Guarantee </a>
-							, which was introduced on 1st January 2020 and requires energy suppliers
-							to pay customers for the electricity they export to the grid. There are a
-							range of tariffs available for this and in some cases participation requires
-							metering. Deals may also be time limited or have other conditions which you
-							should consider carefully in order to make the best choice for you.
-						</p>
-						<p>
-							The <a href="https://www.solar-trade.org.uk/resource-centre/advice-tips-for-households/smart-export-guarantee/" target="_blank">Solar Trade Association website</a>
-							lists current deals available.
-						</p>
+					<div id="header__block">
+						<h1>Solar Energy Calculator</h1>
+
+						<div class="modContentBlock">
+							<p>
+								This tool provides estimates for fuel bill saving and financial
+								payments you may receive by installing a solar photovoltaic (i.e.
+								solar PV) system. These figures are based on information you provide,
+								using a number of assumptions to indicate potential benefits.
+								This is to help you decide whether a solar PV system is suitable for you.
+							</p>
+							<p>
+								Use of the tool and its outputs is not a guarantee that you will see the
+								exact same fuel bill savings and financial payments from the installation
+								of your planned system.
+							</p>
+							<p>
+								This tool estimates potential payments from the
+								<a href="https://energysavingtrust.org.uk/renewable-energy/electricity/solar-panels/smart-export-guarantee-and-feed-tariffs" target="_blank">Smart Export Guarantee </a>
+								, which was introduced on 1st January 2020 and requires energy suppliers
+								to pay customers for the electricity they export to the grid. There are a
+								range of tariffs available for this and in some cases participation requires
+								metering. Deals may also be time limited or have other conditions which you
+								should consider carefully in order to make the best choice for you.
+							</p>
+							<p>
+								The <a href="https://www.solar-trade.org.uk/resource-centre/advice-tips-for-households/smart-export-guarantee/" target="_blank">Solar Trade Association website</a>
+								lists current deals available.
+							</p>
+						</div>
 					</div>
-
 					<div class="card" id="card">
 						<div class="card-body">
 							<h2>Postcode</h2>
@@ -292,9 +294,7 @@
 							<section class="form-section">
 								<div class="modArrayPitch">
 									<h2>Roof slope</h2>
-									<button type="button" class="btn btn-link" data-toggle="modal" data-target="#HelpWindow_RoofPitch">
-										<i class="fa-solid fa-circle-info"></i>&nbsp;Need help?
-									</button>
+									<button type="button" class="btn btn-link _icon-info" data-toggle="modal" data-target="#HelpWindow_RoofPitch">&nbsp;Need help?</button>
 									<p>
 										The slider below will help you specify the slope
 										angle of the most suitable roofspace.
@@ -315,249 +315,389 @@
 														0°</label>
 												</td>
 												<td class="Slider">
-													<div id="ctl00_ctl00_cphMainContent_cphPageWithSidebar_intRoofPitch" class="RadSlider RadSlider_MetroTouch Slider" style="border-style:None;height:30px;width:300px;">
-														<input id="ctl00_ctl00_cphMainContent_cphPageWithSidebar_intRoofPitch_ClientState" name="ctl00_ctl00_cphMainContent_cphPageWithSidebar_intRoofPitch_ClientState" type="hidden" value="{&quot;value&quot;:30,&quot;selectionStart&quot;:30,&quot;selectionEnd&quot;:0,&quot;isSelectionRangeEnabled&quot;:false,&quot;orientation&quot;:0,&quot;smallChange&quot;:5,&quot;largeChange&quot;:5,&quot;trackMouseWheel&quot;:true,&quot;showDragHandle&quot;:true,&quot;showDecreaseHandle&quot;:true,&quot;showIncreaseHandle&quot;:true,&quot;width&quot;:&quot;300px&quot;,&quot;height&quot;:&quot;30px&quot;,&quot;animationDuration&quot;:100,&quot;minimumValue&quot;:0,&quot;maximumValue&quot;:90,&quot;trackPosition&quot;:1,&quot;liveDrag&quot;:true,&quot;dragText&quot;:&quot;Drag&quot;,&quot;thumbsInteractionMode&quot;:1}" autocomplete="off">
-														<!--                             <div id="RadSliderWrapper_ctl00_ctl00_cphMainContent_cphPageWithSidebar_intRoofPitch"
-                              unselectable="on" class="rslHorizontal" style="width: 300px; height: 30px;"><a
-                                id="RadSliderDecrease_ctl00_ctl00_cphMainContent_cphPageWithSidebar_intRoofPitch"
-                                href="#" class="rslHandle rslDecrease" title="Decrease"><span>Decrease</span></a> -->
-														<div class="slidecontainer">
-															<input type="range" min="0" max="90" value="30" step="5" class="slider" id="firstSlider">
-														</div>
-														<!-- <a id="RadSliderIncrease_ctl00_ctl00_cphMainContent_cphPageWithSidebar_intRoofPitch"
-                                href="#" class="rslHandle rslIncrease " title="Increase"><span>Increase</span></a> -->
-													</div>
-								</div>
-								</td>
-								<td class="MaxValue">
-									<label>
-										90°</label>
-								</td>
-								</tr>
-								</tbody>
-								</table>
-								<p>0° is a flat roof and 90° means that you want to install PV panels on a vertical surface such as a
-									wall.</p>
-						</div>
-						</section>
-						<!-- Roof slope end -->
-						<!-- Shading -->
-						<section class="form-section">
-							<h2>Shading</h2>
-							<button type="button" class="btn btn-link" data-toggle="modal" data-target="#HelpWindow_Overshading">
-								<i class="fa-solid fa-circle-info"></i>&nbsp;Need help?
-							</button>
-							<p>Use the slider to indicate how much shading you expect to have on your roof where the solar PV system
-								will be installed.</p>
-
-							<div class="modArrayShading">
-								<div id="divOvershading" class="Overshading">
-									<div class="Diagram" style="background-position: 0px -112px;">
-									</div>
-									<input type="hidden" value="1" class="HiddenValue">
-									<div id="Description" class="Description"><label>Modest</label><span class="Value"><span class="Percent">20-60%</span>
-											of sky</span></div>
-								</div>
-								<table class="modSliderWrapper">
-									<tbody>
-										<tr>
-											<td class="MinValue">
-												<label for="SliderContainer">
-												</label>
-											</td>
-											<td class="Slider">
-
-												<div id="ctl00_ctl00_cphMainContent_cphPageWithSidebar_intOvershading" class="RadSlider RadSlider_MetroTouch Slider" style="border-style:None;height:70px;width:350px;">
-
-													<div class="secondSlider__container">
-														<div class="secondSlider__left">None</div>
-														<div class="secondSlider__right">Heavy</div>
-													</div>
-
 													<div class="slidecontainer">
-														<input type="range" min="0" max="3" value="1" class="slider" id="secondSlider">
+														<input type="range" min="0" max="90" value="30" step="5" class="slider" id="firstSlider">
+													</div>
+												</td>
+												<td class="MaxValue">
+													<label>
+														90°</label>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>0° is a flat roof and 90° means that you want to install PV panels on a vertical surface such as a
+										wall.</p>
+								</div>
+							</section>
+							<!-- Roof slope end -->
+							<!-- Shading -->
+							<section class="form-section">
+								<h2>Shading</h2>
+								<button type="button" class="btn btn-link _icon-info" data-toggle="modal" data-target="#HelpWindow_Overshading">&nbsp;Need help?</button>
+								<p>Use the slider to indicate how much shading you expect to have on your roof where the solar PV system
+									will be installed.</p>
+
+								<div class="modArrayShading">
+									<div id="divOvershading" class="Overshading">
+										<div class="Diagram" style="background-position: 0px -112px;">
+										</div>
+										<input type="hidden" value="1" class="HiddenValue">
+										<div id="Description" class="Description"><label>Modest</label><span class="Value"><span class="Percent">20-60%</span>
+												of sky</span></div>
+									</div>
+									<table class="modSliderWrapper">
+										<tbody>
+											<tr>
+												<td class="MinValue">
+													<label for="SliderContainer">
+													</label>
+												</td>
+												<td class="Slider">
+
+													<div id="ctl00_ctl00_cphMainContent_cphPageWithSidebar_intOvershading" class="RadSlider RadSlider_MetroTouch Slider" style="border-style:None;height:70px;">
+
+														<div class="secondSlider__container">
+															<div class="secondSlider__left">None</div>
+															<div class="secondSlider__right">Heavy</div>
+														</div>
+
+														<div class="slidecontainer">
+															<input type="range" min="0" max="3" value="1" class="slider" id="secondSlider">
+														</div>
+
 													</div>
 
-												</div>
+												</td>
+												<td class="MaxValue">
+													<label>
+													</label>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
+							<!-- Shading end -->
+							<!-- Array direction -->
+							<section class="form-section">
+								<div class="modArrayDirection">
+									<h2>Roof direction</h2>
+									<button type="button" class="btn btn-link _icon-info" data-toggle="modal" data-target="#HelpWindow_RoofDirection">&nbsp;Need help?</button>
+									<p>
+										The slider below will help you specify the
+										direction of the most suitable roofspace.
+									</p>
+									<p>Adjust the map to find your property and then adjust the compass to align it with the desired
+										direction.</p>
+									<div class="MapView">
 
-											</td>
-											<td class="MaxValue">
-												<label>
-												</label>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</section>
-						<!-- Shading end -->
-						<!-- Array direction -->
-						<section class="form-section">
-							<div class="modArrayDirection">
-								<h2>Roof direction</h2>
-								<button type="button" class="btn btn-link" data-toggle="modal" data-target="#HelpWindow_RoofDirection">
-									<i class="fa-solid fa-circle-info"></i>&nbsp;Need help?
-								</button>
-								<p>
-									The slider below will help you specify the
-									direction of the most suitable roofspace.
-								</p>
-								<p>Adjust the map to find your property and then adjust the compass to align it with the desired
-									direction.</p>
-								<div class="MapView">
+										<div id="map" style="width: 400px; height: 300px; position: relative; overflow: hidden;">
+										</div>
 
-									<div id="map" style="width: 400px; height: 300px; position: relative; overflow: hidden;">
+
+
+
+										<script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD5srX6vbvsxllrUSQ-gW5r4C2B1jpAAk0&libraries=places&_v=20221111014334"></script>
+
+										<div id="divHouseDirectionMap" class="ArrayDirection" style="background-position: 0px 0px;">
+											<input type="hidden" value="16" id="hiddenValueMap" class="HiddenValue">
+										</div>
 									</div>
+									<table class="modSliderWrapper">
+										<tbody>
+											<tr>
+												<td class="MinValue">
+													<label for="SliderContainer">
 
+														&nbsp;&nbsp;&nbsp;&nbsp;
+													</label>
+												</td>
+												<td class="Slider">
+													<div class="slidecontainer">
+														<input type="range" min="0" max="35" value="0" step="1" class="slider mapSlider" id="mapSlider">
+													</div>
+												</td>
+												<td class="MaxValue">
+													<label>
+														&nbsp;&nbsp;&nbsp;&nbsp;
 
-
-
-									<script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD5srX6vbvsxllrUSQ-gW5r4C2B1jpAAk0&libraries=places&_v=20221108220604"></script>
-
-									<div id="divHouseDirectionMap" class="ArrayDirection" style="background-position: 0px 0px;">
-										<input type="hidden" value="16" id="hiddenValueMap" class="HiddenValue">
+													</label>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="modInfo-sm TextAlignCenter">
+										Please adjust slide bar to correct direction
+									</div>
+									<div id="divHouseDirection" class="HouseDirection">
+										<input type="hidden" value="180" class="HiddenValue">
 									</div>
 								</div>
-								<table class="modSliderWrapper">
-									<tbody>
-										<tr>
-											<td class="MinValue">
-												<label for="SliderContainer">
+							</section>
+							<!-- Array direction end -->
+							<!-- Array size -->
+							<section class="form-section">
+								<div id="divArraySize" class="modArraySize">
+									<h2>Installation size</h2>
+									<button type="button" class="btn btn-link _icon-info" data-toggle="modal" data-target="#HelpWindow_ArraySize">
+										&nbsp;Need help?
+									</button>
+									<p>Please choose the size of the system you’re interested in installing.</p>
+									<p>
+										Our standard assumption is Medium (4kWp) as this is around the
+										average size of solar PV panels that have been installed
+										on domestic properties. Typical solar electricity systems
+										usually require 10-20m<sup>2</sup> of unshaded space. Smaller systems are
+										possible, but less likely to be cost effective.
+									</p>
+									<div class="Diagram" style="background-position: 0px -100px;">
+									</div>
+									<table class="modSliderWrapper">
+										<tbody>
+											<tr>
 
-													&nbsp;&nbsp;&nbsp;&nbsp;
-												</label>
-											</td>
-											<td class="Slider">
-												<div class="slidecontainer">
-													<input type="range" min="0" max="35" value="0" step="1" class="slider mapSlider" id="mapSlider">
+
+												<div class="slidecontainer fourSlidecontainer">
+													<div class="fourSlider__container">
+														<div>Small<br>
+															(2kWp)</div>
+														<div>Medium<br>
+															(4kWp)</div>
+														<div>Large<br>
+															(6kWp)</div>
+														<div>Very large<br>
+															(8kWp)</div>
+													</div>
+													<input type="range" min="0" max="3" value="1" step="1" class="slider fourSlider" id="fourSlider">
 												</div>
-											</td>
-											<td class="MaxValue">
-												<label>
-													&nbsp;&nbsp;&nbsp;&nbsp;
+											</tr>
+										</tbody>
+									</table>
+									<p class="text-center font-weight-bold">OR</p>
+									<div class="form-group">
+										<label for="cphMainContent_cphPageWithSidebar_intGenerationID">If you know it, what is the specific
+											peak generation of the system you plan to install in kilowatts?</label>
+										<div class="row">
+											<div class="col-md-4">
+												<select name="ctl00$ctl00$cphMainContent$cphPageWithSidebar$intGenerationID" id="intGenerationID" class="form-control">
+													<option selected="selected" value="0">(Optional)</option>
+													<option value="2">2 kWp</option>
+													<option value="2.5">2.5 kWp</option>
+													<option value="3">3 kWp</option>
+													<option value="3.5">3.5 kWp</option>
+													<option value="4">4 kWp</option>
+													<option value="5">5 kWp</option>
+													<option value="6">6 kWp</option>
+													<option value="7">7 kWp</option>
+													<option value="8">8 kWp</option>
+													<option value="9">9 kWp</option>
+													<option value="10">10 kWp</option>
 
-												</label>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="modInfo-sm TextAlignCenter">
-									Please adjust slide bar to correct direction
-								</div>
-								<div id="divHouseDirection" class="HouseDirection">
-									<input type="hidden" value="180" class="HiddenValue">
-								</div>
-							</div>
-						</section>
-						<!-- Array direction end -->
-						<!-- Array size -->
-						<section class="form-section">
-							<div id="divArraySize" class="modArraySize">
-								<h2>Installation size</h2>
-								<button type="button" class="btn btn-link" data-toggle="modal" data-target="#HelpWindow_ArraySize">
-									<i class="fa-solid fa-circle-info"></i>&nbsp;Need help?
-								</button>
-								<p>Please choose the size of the system you’re interested in installing.</p>
-								<p>
-									Our standard assumption is Medium (4kWp) as this is around the
-									average size of solar PV panels that have been installed
-									on domestic properties. Typical solar electricity systems
-									usually require 10-20m<sup>2</sup> of unshaded space. Smaller systems are
-									possible, but less likely to be cost effective.
-								</p>
-								<div class="Diagram" style="background-position: 0px -100px;">
-								</div>
-								<table class="modSliderWrapper">
-									<tbody>
-										<tr>
-
-
-											<div class="slidecontainer fourSlidecontainer">
-												<div class="fourSlider__container">
-													<div>Small<br>
-														(2kWp)</div>
-													<div>Medium<br>
-														(4kWp)</div>
-													<div>Large<br>
-														(6kWp)</div>
-													<div>Very large<br>
-														(8kWp)</div>
-												</div>
-												<input type="range" min="0" max="3" value="1" step="1" class="slider fourSlider" id="fourSlider">
+												</select>
 											</div>
-										</tr>
-									</tbody>
-								</table>
-								<p class="text-center font-weight-bold">OR</p>
+										</div>
+
+									</div>
+								</div>
+							</section>
+							<!-- Array size end -->
+							<!-- Occupancy -->
+							<section class="form-section">
+								<h2>When you are at home</h2>
 								<div class="form-group">
-									<label for="cphMainContent_cphPageWithSidebar_intGenerationID">If you know it, what is the specific
-										peak generation of the system you plan to install in kilowatts?</label>
+									<label for="cphMainContent_cphPageWithSidebar_intOccupancyType">Please tell us when you are typically
+										at home during the week to help us estimate how much of the electricity you will use</label>
 									<div class="row">
 										<div class="col-md-4">
-											<select name="ctl00$ctl00$cphMainContent$cphPageWithSidebar$intGenerationID" id="cphMainContent_cphPageWithSidebar_intGenerationID" class="form-control">
-												<option selected="selected" value="0">(Optional)</option>
-												<option value="1002">2 kWp</option>
-												<option value="1012">2.5 kWp</option>
-												<option value="1003">3 kWp</option>
-												<option value="1004">3.5 kWp</option>
-												<option value="1005">4 kWp</option>
-												<option value="1006">5 kWp</option>
-												<option value="1007">6 kWp</option>
-												<option value="1008">7 kWp</option>
-												<option value="1009">8 kWp</option>
-												<option value="1010">9 kWp</option>
-												<option value="1011">10 kWp</option>
+											<select name="ctl00$ctl00$cphMainContent$cphPageWithSidebar$intOccupancyType" id="cphMainContent_cphPageWithSidebar_intOccupancyType" class="form-control">
+												<option value="1">Home all day</option>
+												<option value="2">Home in the mornings</option>
+												<option value="3">Home in the afternoons</option>
+												<option value="4">Out all day until 4pm</option>
+												<option selected="selected" value="5">Out all day until 6pm</option>
 
 											</select>
 										</div>
 									</div>
+								</div>
+							</section>
+							<!-- Occupancy end -->
+
+							<section class="form-section clearfix">
+								<a id="step2BackButton" class="btn btn-primary" href="#">Back</a>
+								<a id="step2NextButton" class="btn btn-primary float-right" href="#">Next</a>
+							</section>
+
+
+						</div>
+						<!-- Solar energy calc -->
+
+					</div>
+					<div id="resultsBlock" class="rmpView rmpHidden">
+
+						<div id="pgSolarResults">
+							<div id="pgPeriod1">
+								<h2>Your results</h2>
+								<p>
+									For more information, please read the calculator assumptions.
+								</p>
+								<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#HelpWindow_Assumptions">
+									Assumptions
+								</button>
+
+								<hr>
+
+								<div class="summary-items">
+									<div class="summary-item">
+										<p class="summary-item-label">Potential annual benefit</p>
+										<p class="summary-item-value">
+											£<span id="potentialAnnualBenefit">308</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="summary-items">
+									<div class="summary-item">
+										<p class="summary-item-label">
+											Potential CO<sub>2</sub> saving
+										</p>
+										<p class="summary-item-value">
+											<span id="potentialCO2saving">675</span>&nbsp;kg /
+											year
+										</p>
+									</div>
+
+									<div class="summary-item">
+										<p class="summary-item-label">Potential fuel bill saving</p>
+										<p class="summary-item-value">
+											£<span id="potentialFuelBillSaving">190</span>&nbsp;/
+											year
+										</p>
+									</div>
+
+									<div class="summary-item">
+										<p class="summary-item-label">
+											Potential payments from SEG
+											<br>
+											(at 5 p/kWh)
+										</p>
+										<p class="summary-item-value">
+											£<span id="potentialPaymentsFromSEG">118</span>&nbsp;year
+										</p>
+									</div>
+								</div>
+
+								<div class="summary-items">
+									<div class="summary-item">
+										<p class="summary-item-label">Potential lifetime benefit</p>
+										<p class="summary-item-value">
+											£<span id="potentialLifetimeBenefit">7,393</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="summary-items">
+									<div class="summary-item">
+										<p class="summary-item-label">
+											Potential lifetime CO<sub>2</sub> saving
+										</p>
+										<p class="summary-item-value">
+											<span id="potentialLifetimeCO2Saving">15,852</span>&nbsp;kg
+										</p>
+									</div>
+
+									<div class="summary-item">
+										<p>Potential lifetime fuel bill saving</p>
+										<p class="summary-item-value">
+											£<span id="potentialLifetimeFuelBillSaving">4,647</span>
+										</p>
+									</div>
+
+									<div class="summary-item">
+										<p class="summary-item-label">
+											Potential lifetime payments from SEG
+											<br>
+											(at 5 p/kWh)
+										</p>
+										<p class="summary-item-value">
+											£<span id="potentialLifetimePaymentsFromSEG">2,746</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="summary-items">
+									<div class="summary-item">
+										<p class="summary-item-label">Estimated installation costs</p>
+										<p class="summary-item-value">
+											£<span id="estimatedInstallationCosts">5,942</span>
+										</p>
+									</div>
+
+									<div class="summary-item">
+										<p class="summary-item-label">Estimated lifetime maintenance costs</p>
+										<p class="summary-item-value">
+											£<span id="estimatedLifetimeMaintenanceCosts">1450</span>
+										</p>
+									</div>
+
+									<div class="summary-item">
+										<p class="summary-item-label">Potential lifetime net benefit</p>
+										<p class="summary-item-value">
+											£<span id="potentialLifetimeNetBenefit">1</span>
+										</p>
+									</div>
+
 
 								</div>
-							</div>
-						</section>
-						<!-- Array size end -->
-						<!-- Occupancy -->
-						<section class="form-section">
-							<h2>When you are at home</h2>
-							<div class="form-group">
-								<label for="cphMainContent_cphPageWithSidebar_intOccupancyType">Please tell us when you are typically
-									at home during the week to help us estimate how much of the electricity you will use</label>
-								<div class="row">
-									<div class="col-md-4">
-										<select name="ctl00$ctl00$cphMainContent$cphPageWithSidebar$intOccupancyType" id="cphMainContent_cphPageWithSidebar_intOccupancyType" class="form-control">
-											<option value="1">Home all day</option>
-											<option value="2">Home in the mornings</option>
-											<option value="3">Home in the afternoons</option>
-											<option value="4">Out all day until 4pm</option>
-											<option selected="selected" value="5">Out all day until 6pm</option>
 
-										</select>
+								<div class="summary-items">
+									<div class="summary-item">
+										<p class="summary-item-label">Size of the system</p>
+										<p class="summary-item-value">
+											<span id="sizeOfTheSystem">4</span>
+											kWp
+										</p>
+									</div>
+									<div class="summary-item">
+										<p class="summary-item-label">Energy generated by the panels</p>
+										<p class="summary-item-value">
+											<span id="energyGeneratedByThePanels">2,919</span>
+											kWh / year
+										</p>
 									</div>
 								</div>
 							</div>
-						</section>
-						<!-- Occupancy end -->
+							<hr>
+							<div class="alert alert-info">
+								<h2>Next steps</h2>
+								<ul>
+									<li>We recommend you get three quotes to compare costs and services and be sure to consider planning
+										permission.
+									</li>
+									<li>Explore the Smart Export Guarantee tariffs available to
+										you on the <a href="https://solarenergyuk.org/resource/smart-export-guarantee/" target="_blank">Solar Energy UK website</a>.
+									</li>
+									<li>
+										<a href="https://energysavingtrust.org.uk/energywire-signup" target="_blank">Sign up to
+											Energywire</a>, our
+										monthly e-newsletter, for energy saving tips, news and more.
+									</li>
+								</ul>
+							</div>
+							<a id="step3BackButton" class="btn btn-primary" href="#">Back</a>
 
-						<section class="form-section clearfix">
-							<a id="step2BackButton" class="btn btn-primary" href="#">Back</a>
-							<a id="step2NextButton" class="btn btn-primary float-right" href="#">Next</a>
-						</section>
+						</div>
 
-						<script>
-							formBuild(pgSolarEnergyCalc);
-						</script>
 					</div>
-					<!-- Solar energy calc -->
-
 				</div>
 			</div>
-	</div>
 
-	</main>
-	<footer class="footer">
-		<div class="footer__container">
-		</div>
-	</footer>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
 	</div>
 	<!-- 
 <div id="popup" aria-hidden="true" class="popup">
@@ -571,8 +711,8 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20221108220604"></script>
-	<script src="https://code.jquery.com/jquery-3.6.1.min.js?_v=20221108220604" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20221111014334"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js?_v=20221111014334" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </body>
 
 </html>
